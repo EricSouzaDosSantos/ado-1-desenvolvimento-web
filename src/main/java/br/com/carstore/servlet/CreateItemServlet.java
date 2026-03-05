@@ -9,5 +9,11 @@ import java.io.IOException;
 
 @WebServlet("/create-item")
 public class CreateItemServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String json = "{\"itemName\":\"" + "pera com café" + "\"}";
+        response.getWriter().write(json);
+    }
 
 }
